@@ -56,11 +56,17 @@ public class newActivity extends AppCompatActivity
      * file you created in 3. For now you can simply create Toast messages to test the SearchView in the
      * onQueryTextSubmit and onQueryTextChange methods. We will implement these later.
      * */
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
+
         getMenuInflater().inflate(R.menu.menu,menu);
         MenuItem myActionMenuItem = menu.findItem(R.id.search_action);
+        Window window = newActivity.this.getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        window.setStatusBarColor(ContextCompat.getColor(newActivity.this, R.color.colorAccent));
         SearchView searchView = (SearchView) myActionMenuItem.getActionView();
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener()
         {
@@ -126,7 +132,6 @@ public class newActivity extends AppCompatActivity
         });
         recycler_view.setAdapter(myRecyclerAdapter);
         recycler_view.setItemAnimator(new DefaultItemAnimator());
-
-
     }
+
 }

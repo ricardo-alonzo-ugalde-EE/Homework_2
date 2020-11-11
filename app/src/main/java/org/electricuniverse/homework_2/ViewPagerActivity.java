@@ -1,9 +1,16 @@
 package org.electricuniverse.homework_2;
 
+import android.os.Build;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
@@ -11,11 +18,29 @@ import com.google.android.material.tabs.TabLayout;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ViewPagerActivity extends AppCompatActivity {
-    public class DepthPageTransformer implements ViewPager.PageTransformer {
+public class ViewPagerActivity extends AppCompatActivity
+{
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState)
+    {
+        Window window = ViewPagerActivity.this.getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        window.setStatusBarColor(ContextCompat.getColor(ViewPagerActivity.this, R.color.colorAccent));
+        super.onCreate(savedInstanceState, persistentState);
+    }
+
+    public class DepthPageTransformer implements ViewPager.PageTransformer
+    {
+
         private static final float MIN_SCALE = 0.75f;
 
-        public void transformPage(View view, float position) {
+        @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+        public void transformPage(View view, float position)
+        {
+
+
             int pageWidth = view.getWidth();
             if (position < -1) { // [-Infinity,-1)
                 // This page is way off-screen to the left.
@@ -45,11 +70,13 @@ public class ViewPagerActivity extends AppCompatActivity {
             }
         }
     }
-    public class ZoomOutPageTransformer implements ViewPager.PageTransformer {
+    public class ZoomOutPageTransformer implements ViewPager.PageTransformer
+    {
         private static final float MIN_SCALE = 0.85f;
         private static final float MIN_ALPHA = 0.5f;
 
-        public void transformPage(View view, float position) {
+        public void transformPage(View view, float position)
+        {
             int pageWidth = view.getWidth();
             int pageHeight = view.getHeight();
 

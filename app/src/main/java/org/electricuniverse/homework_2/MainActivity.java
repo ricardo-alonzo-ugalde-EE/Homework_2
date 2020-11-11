@@ -237,7 +237,7 @@ public class MainActivity extends AppCompatActivity
 
     public void MasterDetail(View view)
     {
-        startActivity(new Intent(this,MasterDetail.class));
+        startActivity(new Intent(this,newActivity.class));
     }
 
 
