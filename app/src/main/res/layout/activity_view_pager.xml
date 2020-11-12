@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/tabs"
         android:background="@color/cardview_dark_background"
-        app:tabTextColor="@color/highlighted_text_material_light"
+        app:tabTextColor="@color/black"
         app:tabMode="scrollable"
         app:tabIndicatorColor="@color/colorAccent"
         app:tabGravity="fill">

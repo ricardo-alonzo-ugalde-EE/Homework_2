@@ -16,13 +16,22 @@
         <include
             layout="@layout/main_toolbar"/>
 
+        <ImageView
+            android:id="@+id/imageView3"
+            android:fadingEdge="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="344dp"
+            app:srcCompat="@drawable/ic_diversity" />
+
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="197dp"
+            android:gravity="center"
             android:text="Home"
             android:textSize="50sp"
-            android:textStyle="bold"
-            android:gravity="center"/>
+            android:textStyle="bold" />
+
+
 
         <com.google.android.material.tabs.TabLayout
             android:layout_width="match_parent"
