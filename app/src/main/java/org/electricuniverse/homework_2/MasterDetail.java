@@ -7,10 +7,9 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-public class MasterDetail extends AppCompatActivity implements ListFragment.OnItemSelectedListener {
+public class MasterDetail extends AppCompatActivity implements ListFragment.OnItemSelectedListener
+{
     private boolean twoPane;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -32,7 +31,8 @@ public class MasterDetail extends AppCompatActivity implements ListFragment.OnIt
     }
 
     @Override
-    public void onListItemSelected(int imageResourceID, String title, String year) {
+    public void onListItemSelected(int imageResourceID, String title, String year)
+    {
         Bundle args=new Bundle();
         args.putInt("img_id",imageResourceID);
         args.putString("mtitle",title);
