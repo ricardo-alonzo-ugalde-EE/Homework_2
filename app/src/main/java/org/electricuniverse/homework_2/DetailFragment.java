@@ -35,18 +35,18 @@ public class DetailFragment extends Fragment
         title.setText(args.getString("mtitle"));
         year.setText(args.getString("myear"));
 
-        Button lebutton = (Button) rooView.findViewById(R.id.le_button);
+      //  Button lebutton = (Button) rooView.findViewById(R.id.le_button);
 
-        lebutton.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-
-                Intent intent = new Intent(getActivity(), MasterDetail.class);
-                startActivity(intent);
-            }
-        });
+        //lebutton.setOnClickListener(new View.OnClickListener()
+//        {
+//            @Override
+//            public void onClick(View v)
+//            {
+//
+//                Intent intent = new Intent(getActivity(), MasterDetail.class);
+//                startActivity(intent);
+//            }
+//        });
         return rooView;
     }
 
