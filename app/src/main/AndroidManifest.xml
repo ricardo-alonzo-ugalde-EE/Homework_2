@@ -12,8 +12,10 @@
         <activity android:name=".ViewPagerActivity"/>
         <activity android:name=".MasterDetail" />
         <activity android:name=".newActivity" />
+        <activity android:name=".ActivityMaster"/>
         <activity android:name=".AboutUs"></activity>
         <activity android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

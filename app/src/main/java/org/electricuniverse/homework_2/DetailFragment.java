@@ -26,7 +26,7 @@ public class DetailFragment extends Fragment
 
 
         // Inflate the layout for this fragment
-        View rooView=inflater.inflate(R.layout.detail_view, container, false);
+        View rooView=inflater.inflate(R.layout.detail_fragment, container, false);
         ImageView imageView=(ImageView)rooView.findViewById(R.id.img_poster);
         TextView title=(TextView)rooView.findViewById(R.id.title);
         TextView year=(TextView)rooView.findViewById(R.id.year);
@@ -43,7 +43,7 @@ public class DetailFragment extends Fragment
             public void onClick(View v)
             {
 
-                Intent intent = new Intent(getActivity(), newActivity.class);
+                Intent intent = new Intent(getActivity(), MasterDetail.class);
                 startActivity(intent);
             }
         });

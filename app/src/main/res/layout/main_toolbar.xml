@@ -28,6 +28,17 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_more"/>
+        android:onClick="ClickAboutUs"
+        android:src="@drawable/ic_baseline_account_circle_24"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="ClickHome"
+        android:src="@drawable/ic_home"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="ClickLogout"
+        android:src="@drawable/ic_logout"/>
 
 </LinearLayout>
